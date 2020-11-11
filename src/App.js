@@ -2,8 +2,8 @@ import React from 'react';
 import Calculator from './Calculator';
 
 const App = () => (
-    <div className="App">
-      <h1>Calculator</h1>
+    <div className="tc">
+      <h1 >Calculator</h1>
       <Calculator />
     </div>
   )
