@@ -10,6 +10,7 @@ class Calculator extends React.Component {
         }
     }
 
+
     handleFirstNum = e => {
         // console.log(e);
         const num1 = parseInt(e.target.value, 10);
@@ -45,16 +46,17 @@ class Calculator extends React.Component {
     }
 
     render() {
+        const {add, subtract, divide, multiply, clear, handleFirstNum, handleSecondNum} = this
         return (
             <div>
                 <h1>Result:{this.state.result}</h1>
-                <input onChange={this.handleFirstNum} type='number' placeholder='first number' value={this.state.num1} />
-                <input onChange={this.handleSecondNum} type='number' placeholder='second number' value={this.state.num2} />
-                <button onClick={this.add}>+</button>
-                <button onClick={this.subtract}>-</button>
-                <button onClick={this.divide}>/</button>
-                <button onClick={this.multiply}>*</button>
-                <button onClick={this.clear}>clear</button>
+                <input onChange={handleFirstNum} type='number' placeholder='first number' value={this.state.num1} />
+                <input onChange={handleSecondNum} type='number' placeholder='second number' value={this.state.num2} />
+                <button onClick={add}>+</button>
+                <button onClick={subtract}>-</button>
+                <button onClick={divide}>/</button>
+                <button onClick={multiply}>*</button>
+                <button onClick={clear}>clear</button>
             </div>
         )
     }
